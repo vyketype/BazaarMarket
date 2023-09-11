@@ -1,0 +1,7 @@
+name: BazaarMarket
+description: Recreation of the Hypixel Skyblock Bazaar system, but fully customizable.
+main: io.github.vyketype.bazaarmarket.BazaarMarket
+version: 1.0-pre1
+api-version: "1.20"
+author: vyketype
+website: https://github.com/vyketype/BazaarMarket

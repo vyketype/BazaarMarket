@@ -1,0 +1,341 @@
+# ---------------------------------------------------------------------
+# CONFIGURATION FOR BAZAARMARKET
+# by vyketype
+# ---------------------------------------------------------------------
+
+# Note: DO NOT LEAVE ANY OF THE FIELDS EMPTY UNLESS TOLD
+
+# 1. LOGIN MESSAGE
+# Upon a player's login, display a message in chat to inform them about checking out the market
+# To display no message, type "-none"
+# Default: "§bMake sure to always check your orders on the market!"
+login_message: "§bMake sure to always check your orders on the market!"
+
+# 2. SENDING LOGS OF MARKET ACTIONS TO CONSOLE
+# Set to true if you want every market action to be logged into console
+log_to_console: true
+
+# 3. BACKUP TIMER
+# Interval of time (in minutes) between every Profile and OrderBook backup
+# Default: 5 minutes (this is recommended)
+backup_timer: 5
+
+# 4. MARKET STATUS
+# Is the market open?
+# It is recommended to use the commands /market open and /market close instead of changing the value here.
+market_open: true
+
+# 5. ORDER ITEMS
+# Customize which items will be bought/sold on the market using categories
+# Each category can handle a maximum of 45 items (subject to change in future updates)
+# Maximum of 9 categories (subject to change in future updates)
+categories:
+  category1:
+    name: Concrete and Concrete Powder
+    display_material: pink_concrete
+    color: d
+    items:
+      - WHITE_CONCRETE
+      - ORANGE_CONCRETE
+      - MAGENTA_CONCRETE
+      - LIGHT_BLUE_CONCRETE
+      - YELLOW_CONCRETE
+      - LIME_CONCRETE
+      - PINK_CONCRETE
+      - GRAY_CONCRETE
+      - LIGHT_GRAY_CONCRETE
+      - CYAN_CONCRETE
+      - PURPLE_CONCRETE
+      - BLUE_CONCRETE
+      - BROWN_CONCRETE
+      - GREEN_CONCRETE
+      - RED_CONCRETE
+      - BLACK_CONCRETE
+      - WHITE_CONCRETE_POWDER
+      - ORANGE_CONCRETE_POWDER
+      - MAGENTA_CONCRETE_POWDER
+      - LIGHT_BLUE_CONCRETE_POWDER
+      - YELLOW_CONCRETE_POWDER
+      - LIME_CONCRETE_POWDER
+      - PINK_CONCRETE_POWDER
+      - GRAY_CONCRETE_POWDER
+      - LIGHT_GRAY_CONCRETE_POWDER
+      - CYAN_CONCRETE_POWDER
+      - PURPLE_CONCRETE_POWDER
+      - BLUE_CONCRETE_POWDER
+      - BROWN_CONCRETE_POWDER
+      - GREEN_CONCRETE_POWDER
+      - RED_CONCRETE_POWDER
+      - BLACK_CONCRETE_POWDER
+  category2:
+    name: Wool and Terracotta
+    display_material: white_wool
+    color: f
+    items:
+      - WHITE_WOOL
+      - ORANGE_WOOL
+      - MAGENTA_WOOL
+      - LIGHT_BLUE_WOOL
+      - YELLOW_WOOL
+      - LIME_WOOL
+      - PINK_WOOL
+      - GRAY_WOOL
+      - LIGHT_GRAY_WOOL
+      - CYAN_WOOL
+      - PURPLE_WOOL
+      - BLUE_WOOL
+      - BROWN_WOOL
+      - GREEN_WOOL
+      - RED_WOOL
+      - BLACK_WOOL
+      - TERRACOTTA
+      - WHITE_TERRACOTTA
+      - ORANGE_TERRACOTTA
+      - MAGENTA_TERRACOTTA
+      - LIGHT_BLUE_TERRACOTTA
+      - YELLOW_TERRACOTTA
+      - LIME_TERRACOTTA
+      - PINK_TERRACOTTA
+      - GRAY_TERRACOTTA
+      - LIGHT_GRAY_TERRACOTTA
+      - CYAN_TERRACOTTA
+      - PURPLE_TERRACOTTA
+      - BLUE_TERRACOTTA
+      - BROWN_TERRACOTTA
+      - GREEN_TERRACOTTA
+      - RED_TERRACOTTA
+      - BLACK_TERRACOTTA
+  category3:
+    name: Woods, Leaves and Saplings
+    display_material: oak_log
+    color: a
+    items:
+      - oak_log
+      - oak_leaves
+      - oak_sapling
+      - spruce_log
+      - spruce_leaves
+      - spruce_sapling
+      - birch_log
+      - birch_leaves
+      - birch_sapling
+      - dark_oak_log
+      - dark_oak_leaves
+      - dark_oak_sapling
+      - acacia_log
+      - acacia_leaves
+      - acacia_sapling
+      - jungle_log
+      - jungle_leaves
+      - jungle_sapling
+      - mangrove_log
+      - mangrove_leaves
+      - mangrove_propagule
+      - cherry_log
+      - cherry_leaves
+      - cherry_sapling
+      - crimson_stem
+      - crimson_hyphae
+      - azalea_leaves
+      - warped_stem
+      - warped_hyphae
+  category4:
+    name: Building Blocks
+    display_material: grass_block
+    color: 2
+    items:
+      - grass_block
+      - dirt
+      - coarse_dirt
+      - podzol
+      - mycelium
+      - rooted_dirt
+      - moss_block
+      - mud
+      - packed_mud
+      - crimson_nylium
+      - warped_nylium
+      - bricks
+      - clay
+      - sand
+      - red_sand
+      - ice
+      - packed_ice
+      - blue_ice
+      - pearlescent_froglight
+      - ochre_froglight
+      - verdant_froglight
+      - glass
+      - tinted_glass
+      - snow_block
+      - sculk
+      - end_stone
+      - purpur_block
+      - prismarine
+      - prismarine_bricks
+      - dark_prismarine
+      - sea_lantern
+      - quartz_block
+      - soul_sand
+      - soul_soil
+      - netherrack
+      - nether_bricks
+      - red_nether_bricks
+      - shroomlight
+      - slime_block
+  category5:
+    name: Stones and Minerals
+    display_material: diamond
+    color: b
+    items:
+      - cobblestone
+      - stone
+      - andesite
+      - diorite
+      - granite
+      - deepslate
+      - tuff
+      - calcite
+      - dripstone_block
+      - obsidian
+      - blackstone
+      - basalt
+      - gravel
+      - glowstone_dust
+      - quartz
+      - netherite_scrap
+      - netherite_ingot
+      - charcoal
+      - coal
+      - raw_iron
+      - raw_copper
+      - raw_gold
+      - iron_ingot
+      - copper_ingot
+      - gold_ingot
+      - diamond
+      - emerald
+      - amethyst_shard
+      - lapis_lazuli
+      - redstone
+      - prismarine_shard
+      - prismarine_crystals
+  category6:
+    name: Mob Drops
+    display_material: rotten_flesh
+    color: c
+    items:
+      - rotten_flesh
+      - bone
+      - string
+      - spider_eye
+      - gunpowder
+      - ender_pearl
+      - phantom_membrane
+      - slime_ball
+      - magma_cream
+      - blaze_rod
+      - ghast_tear
+      - shulker_shell
+      - dragon_breath
+      - ink_sac
+      - glow_ink_sac
+      - rabbit_hide
+      - rabbit_foot
+      - leather
+      - feather
+      - egg
+  category7:
+    name: Food and Plants
+    display_material: wheat
+    color: e
+    items:
+      - beef
+      - cooked_beef
+      - chicken
+      - cooked_chicken
+      - mutton
+      - cooked_mutton
+      - porkchop
+      - cooked_porkchop
+      - milk_bucket
+      - rabbit
+      - cooked_rabbit
+      - cod
+      - cooked_cod
+      - salmon
+      - cooked_salmon
+      - apple
+      - golden_apple
+      - enchanted_golden_apple
+      - wheat
+      - wheat_seeds
+      - carrot
+      - potato
+      - beetroot
+      - beetroot_seeds
+      - sweet_berries
+      - glow_berries
+      - cocoa_beans
+      - melon_slice
+      - melon_seeds
+      - pumpkin
+      - pumpkin_seeds
+      - brown_mushroom
+      - red_mushroom
+      - cactus
+      - sugar_cane
+      - bamboo
+      - honeycomb
+      - honey_bottle
+      - kelp
+      - lily_pad
+      - azalea
+      - spore_blossom
+  category8:
+    name: Flowers
+    display_material: orange_tulip
+    color: 6
+    items:
+      - poppy
+      - dandelion
+      - white_tulip
+      - pink_tulip
+      - orange_tulip
+      - red_tulip
+      - allium
+      - blue_orchid
+      - cornflower
+      - oxeye_daisy
+      - lily_of_the_valley
+      - azure_bluet
+      - pink_petals
+      - rose_bush
+      - peony
+      - lilac
+      - sunflower
+      - torchflower
+      - pitcher_pod
+  category9:
+    name: Miscellaneous
+    display_material: arrow
+    color: 5
+    items:
+      - chorus_fruit
+      - chorus_flower
+      - nether_wart
+      - arrow
+      - clay_ball
+      - snowball
+      - flint
+      - lead
+      - candle
+      - heart_of_the_sea
+      - nautilus_shell
+      - scute
+      - turtle_egg
+      - sponge
+      - glow_lichen
+      - experience_bottle
+      - totem_of_undying
+      - nether_star
