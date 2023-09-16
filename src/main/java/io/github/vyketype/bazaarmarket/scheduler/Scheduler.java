@@ -3,10 +3,7 @@ package io.github.vyketype.bazaarmarket.scheduler;
 import io.github.vyketype.bazaarmarket.BazaarMarket;
 import io.github.vyketype.bazaarmarket.market.OrderBook;
 import io.github.vyketype.bazaarmarket.profile.Profile;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitScheduler;
 
 public class Scheduler {
