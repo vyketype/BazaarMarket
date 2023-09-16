@@ -13,7 +13,8 @@ public class CommandManager {
               new PriceCommand(),
               new BalanceCommand(),
               new BankCommand(),
-              new TradeBlockCommand()
+              new TradeBlockCommand(),
+              new PayCommand()
       );
       
       public CommandManager() {

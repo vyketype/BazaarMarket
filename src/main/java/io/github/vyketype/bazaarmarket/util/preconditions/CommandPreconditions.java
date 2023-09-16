@@ -105,9 +105,11 @@ public class CommandPreconditions {
             String[] args = StringUtils.split(strArgs, " ", -1);
             String targetName = args[0];
             String strAmount = args[1];
-            
             OfflinePlayer offlineTarget = Bukkit.getOfflinePlayer(targetName);
-            
+            return economy(player, strAmount, offlineTarget);
+      }
+      
+      public static boolean economy(Player player, String strAmount, OfflinePlayer offlineTarget) {
             if (!hasPlayerEverJoined(player, offlineTarget.getUniqueId()))
                   return false;
             
@@ -137,5 +139,15 @@ public class CommandPreconditions {
                   return true;
             }
             return false;
+      }
+      
+      public static boolean playerHasEnoughMoney(Player player, double amount) {
+            double balance = Profile.get(player.getUniqueId()).getBalance().doubleValue();
+            if (balance < amount || balance < 0) {
+                  Messaging.prefixedChat(player, "§cYou do not have that much money!");
+                  player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1F, 0.5F);
+                  return false;
+            }
+            return true;
       }
 }
