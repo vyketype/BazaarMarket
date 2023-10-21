@@ -329,7 +329,7 @@ public class MenuItems {
             BigDecimal sellPrice = book.getHighestSellPrice();
             
             return new ItemBuilder(new ItemStack(material))
-                    .setDisplayName("§eBest current price")
+                    .setDisplayName("§eBest Current Price")
                     .addLoreLine(type == Order.Type.BUY ?
                             "§7Price: §6" + buyPrice.doubleValue() + "$" :
                             "§7Price: §6" + sellPrice.doubleValue() + "$")
@@ -350,8 +350,8 @@ public class MenuItems {
             
             return new ItemBuilder(new ItemStack(Material.GOLD_NUGGET))
                     .setDisplayName(type == Order.Type.BUY ?
-                            "§eBest current price +0.1" :
-                            "§eBest current price -0.1")
+                            "§eBest Current Price +0.1" :
+                            "§eBest Current Price -0.1")
                     .addLoreLine(type == Order.Type.BUY ?
                             "§7Price: §6" + (book.getLowestBuyPrice().add(BigDecimal.valueOf(0.1))).doubleValue() + "$" :
                             "§7Price: §6" + (book.getHighestSellPrice().subtract(BigDecimal.valueOf(0.1))).doubleValue() + "$")
@@ -367,7 +367,7 @@ public class MenuItems {
       
       public static ItemStack getCustomPriceButton() {
             return new ItemBuilder(new ItemStack(Material.NAME_TAG))
-                    .setDisplayName("§eCustom price")
+                    .setDisplayName("§eCustom Price")
                     .addLoreLine("§7Set a custom price for")
                     .addLoreLine("§7your needs.")
                     .addLoreLine(" ")
