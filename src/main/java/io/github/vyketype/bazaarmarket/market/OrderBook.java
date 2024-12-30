@@ -164,8 +164,8 @@ public class OrderBook {
             
             // Check all matching orders (they are already sorted by time)
             for (Order matchingOrder : orders) {
-                  // If the matching order is by the same player, it should be ignored
-                  if (initialOrder.getPlayerUUID() == matchingOrder.getPlayerUUID())
+                  boolean selfTesting = INSTANCE.getConfig().getBoolean("self_testing", false);
+                  if (!selfTesting && initialOrder.getPlayerUUID() == matchingOrder.getPlayerUUID())
                         continue;
                         
                   // Check for blocked players

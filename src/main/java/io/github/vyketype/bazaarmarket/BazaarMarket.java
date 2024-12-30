@@ -11,6 +11,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 
+// TODO
+// - see recently placed orders
+// - update version
+// - paginated categories (in case of 45+ items)
+// - allow more than 9 categories
+
 public class BazaarMarket extends JavaPlugin {
       public static final String MARKET = "§x§1§f§c§a§7§3§lM" +
               "§x§0§0§b§e§8§d§lA" +

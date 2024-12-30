@@ -24,7 +24,8 @@ public class InventoryUtil {
             Inventory inv = player.getInventory();
             int num = 0;
             for (int i = 0; i < inv.getSize(); i++) {
-                  if (inv.getItem(i) == null) continue;
+                  if (inv.getItem(i) == null)
+                        continue;
                   if (Objects.equals(Objects.requireNonNull(inv.getItem(i)).getType(), material)) {
                         num += Objects.requireNonNull(inv.getItem(i)).getAmount();
                   }
@@ -55,17 +56,18 @@ public class InventoryUtil {
                   if (itemStack == null)
                         continue;
                   
-                  if (material == itemStack.getType()) {
-                        int newAmount = itemStack.getAmount() - amount;
-                        if (newAmount > 0) {
-                              itemStack.setAmount(newAmount);
+                  if (material != itemStack.getType())
+                        continue;
+                  
+                  int newAmount = itemStack.getAmount() - amount;
+                  if (newAmount > 0) {
+                        itemStack.setAmount(newAmount);
+                        break;
+                  } else {
+                        inventory.clear(slot);
+                        amount = -newAmount;
+                        if (amount == 0)
                               break;
-                        } else {
-                              inventory.clear(slot);
-                              amount = -newAmount;
-                              if (amount == 0)
-                                    break;
-                        }
                   }
             }
             

@@ -13,6 +13,7 @@ login_message: "§bMake sure to always check your orders on the market!"
 
 # 2. SENDING LOGS OF MARKET ACTIONS TO CONSOLE
 # Set to true if you want every market action to be logged into console
+# Either way, market actions will be logged in the log.yml file
 log_to_console: true
 
 # 3. BACKUP TIMER
@@ -21,11 +22,17 @@ log_to_console: true
 backup_timer: 5
 
 # 4. MARKET STATUS
-# Is the market open?
+# Is the market open? i.e. can players access the market?
 # It is recommended to use the commands /market open and /market close instead of changing the value here.
 market_open: true
 
-# 5. ORDER ITEMS
+# 5. SELF-TESTING
+# Normally, a player's buy order won't match with his own sell order.
+# This setting, when true, will enable players to self-match their orders for testing purposes.
+# DO NOT ENABLE UNLESS TESTING THE PLUGIN (Default is false)
+self_testing: false
+
+# 6. ORDER ITEMS
 # Customize which items will be bought/sold on the market using categories
 # Each category can handle a maximum of 45 items (subject to change in future updates)
 # Maximum of 9 categories (subject to change in future updates)

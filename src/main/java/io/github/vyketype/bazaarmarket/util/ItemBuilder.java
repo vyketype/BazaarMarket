@@ -45,16 +45,6 @@ public class ItemBuilder {
             return this;
       }
       
-      public ItemBuilder setDamage(int value) {
-            ((Damageable) meta).setDamage(value);
-            return this;
-      }
-      
-      public ItemBuilder setNoName() {
-            setDisplayName("");
-            return this;
-      }
-      
       public ItemBuilder setDisplayName(String name) {
             meta.setDisplayName(name);
             return this;
@@ -62,16 +52,6 @@ public class ItemBuilder {
       
       public ItemBuilder setType(Material type) {
             item.setType(type);
-            return this;
-      }
-      
-      public ItemBuilder setGlow() {
-            this.setGlow(true);
-            return this;
-      }
-      
-      public ItemBuilder removeGlow() {
-            this.setGlow(false);
             return this;
       }
       
@@ -102,7 +82,7 @@ public class ItemBuilder {
             return this;
       }
       
-      public ItemBuilder addLoreAll(List<String> list) {
+      public ItemBuilder addLoreList(List<String> list) {
             lore.addAll(list);
             return this;
       }
@@ -117,16 +97,6 @@ public class ItemBuilder {
             return this;
       }
 
-      public ItemBuilder setColor(Color color) {
-            ((LeatherArmorMeta) meta).setColor(color);
-            return this;
-      }
-      
-      public ItemBuilder setBook(Enchantment enchantment, int level) {
-            ((EnchantmentStorageMeta) meta).addStoredEnchant(enchantment, level, true);
-            return this;
-      }
-      
       public ItemBuilder setUnbreakable(boolean value) {
             meta.setUnbreakable(value);
             return this;
